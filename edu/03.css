@@ -1,0 +1,19 @@
+#id-styie {
+  color: pink;
+}
+
+.class-style {
+  color: greenyellow;
+}
+
+h1 {
+  color: red;
+}
+
+* {
+  color: skyblue !important;
+}
+
+h1 {
+  color: black;
+}

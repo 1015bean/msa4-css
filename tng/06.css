@@ -1,0 +1,55 @@
+
+/* 1. strong 이용하기 */
+ul {
+  /* 불릿 없음 */
+  list-style-type: none;
+  
+  /* 줄 간격: 최상위 글자크기의 2배 */
+  /* 최상위요소: html => html의 기본 글자사이즈 16px */
+  line-height: 2rem;
+}
+
+strong {
+    /* 글자색 */
+  color: #ad3000;
+
+  /* 항목들의 글자 크기: 부모요소의 1.5배 */
+  /* 부모요소: li (strong을 감싸고 있는 하나 위 요소) */
+  font-size: 1.5em;
+
+  font-weight: 600;
+}
+
+
+
+/* 
+  폐기: 뒷부분을 p태그로 감싸는 방법p
+  아래 디스플레이 적용시키면 개행은 안 되게 해주지만 글자굶기 등을 못 바꾼다 
+  */
+/* p {
+  display: inline;
+  margin: 0;
+} */
+
+
+
+
+/* 2. span 이용하기 */
+ul {
+  /* 불릿 없음 */
+  list-style-type: none;
+  
+  /* 줄 간격: 최상위 글자크기의 2배 */
+  /* 최상위요소: html => html의 기본 글자사이즈 16px */
+  line-height: 2rem;
+}
+
+.big {
+  /* 항목들의 글자 크기: 부모요소의 1.5배 */
+  /* 부모요소: li (strong을 감싸고 있는 하나 위 요소) */
+  color: #ad3000;
+  font-size: 1.5em;
+
+  /* 글자 굷기 */
+  font-weight: 600;
+}

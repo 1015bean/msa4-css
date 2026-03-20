@@ -1,0 +1,30 @@
+/* 전체 선택자(*): 모든 요소를 선택 
+  사용예: 글자 폰트, 마진이나 패딩 등의 초기 요소를 0으로 만듦(초기 세팅)*/
+* {
+  color: skyblue;
+}
+
+/* 타입 선택자: 특정 요소를 가진 모든 요소를 선택 
+  예: 버튼 등 규격화된 요소를 디자인할 때*/
+p {
+  color: red;
+}
+
+/* 클래스 선택자(.): 주어진 class명을 가진 모든 요소를 선택  class: css로 꾸미기 위해 태그에 붙이는 이름
+  html파일에서 class=클래스명  // css파일에서 .클래스명  */
+.font-color {
+  color: orange;
+}
+
+/* ID 선택자(#): HTML Tag의 ID로 선택 */
+#p1 {
+  color: black;
+}
+
+/* 그룹 선택자: ',(콤마)'를 구분자로 하여 복수의 선택자 요소를 선택 */
+em {color: purple;}
+strong {color: purple;}
+/* 이거를 요렇게 */
+em, strong {
+  color: purple;
+}

@@ -1,0 +1,38 @@
+/* 폰트 크기 */
+.p-font-size {
+  /* : px(픽셀) 단위로 폰트크기 조절 */
+   font-size: 20px;
+  }
+
+   /* em: 부모요소의 글자크기 기준 배율로 폰트 크기 조절 */
+   div {
+    font-size: 30px;
+    }
+
+  .p-font-size2 {
+    font-size: 3em;
+  }
+
+
+    /* rem: 최상위요소(html)의 글자크기 기준 배율로 폰트 크기 조절 */
+  .p-font-size2-5 {
+    font-size: 0.5rem;
+  }
+  
+
+
+/* 폰트 굶기: 100~900를 설정하여 사용가능 */
+.p-font-weight {
+  font-weight: 900;
+}
+
+
+/* 폰트 지정 */
+body {font-family: "궁서", "맑은 고딕", "굴림";}
+
+  /* 웹폰트 이용: 구글폰트에서 폰트 다운 혹은 임베디드 폰트 이용 */
+  body {
+    font-family: "Hi Melody", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  }
