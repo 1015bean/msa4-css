@@ -21,22 +21,21 @@ h1 {
     content-box: 콘텐츠 영역에만 요소의 크기(width, height)를 지정하는 속성값,
                  기본값, 지정한 값이랑 눈에 보이는 게 다름.
     boder-box: 테두리+패딩+콘텐츠 영역에 요소를 크기(width, height)를 지정하는 속성값 
-  */ 콘텐츠박스 실제로 써요?
+  */
 .box1 {
   box-sizing: border-box;
 }
 .box2 {
   box-sizing: content-box;
-}
+
 
 
 
   /* px: 고정 길이 단위 */
   /* %: 부모의 width에 따른 상대 길이 단위 */ 
-  /* 뷰포트(vw, vh): 브라우저의 창 크기에 따른 상대 길이 단위 */  ?기준을모르겟어?
-.box2 {
+  /* 뷰포트(vw, vh): 브라우저의 창 크기에 따른 상대 길이 단위 */
   width: 20%;
-  height: 150vh;
+  height: 30vh;
 }
 
 
