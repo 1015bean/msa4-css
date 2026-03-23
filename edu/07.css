@@ -1,0 +1,25 @@
+.div-border {
+  /* 테두리의 속성(모양)을 지정하는 속성 */
+  border-style: solid;
+  
+  /* 테두리의 두꼐를 지정하는 속성 */
+  /* 
+     1개 지정: 4방향 태두리 두께 설정
+     2개 지정: 상하 - 좌우 순으로 두께 지정
+     3개 지정: 상 - 좌우 - 하 순으로 두께 지정
+     4개 지정: 상- 우 - 하 -좌 순으로 두꼐 지정
+  */
+  border-width: 1px 5px 10px 20px;
+
+  /* 테두리의 색상을 지정하는 속성 */
+  border-color: rgb(23, 110, 23);
+}
+
+  .div-border2 {
+  /* 테두리의 색상과 모양을 한번에 지정하는 속성 */
+  border: 5px solid #802c2c;
+
+  /* 테두리의 꼭지점을 둥글게 만드는 속성 */
+  border-radius: 10px;
+  border-top-left-radius: 30px;
+}

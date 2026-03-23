@@ -1,0 +1,54 @@
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.header {
+  background-color: black;
+  padding: 1px 0px 10px 20px;
+}
+
+h1 {
+  color: white;
+}
+
+.header-expl {
+  color: orange;
+}
+
+.notice {
+  color: white;
+  background-color: black;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.main {
+  text-align: center;
+  border: 1px solid;
+}
+
+.titles {
+  color: red;
+  font-size: 150%;
+  font-weight: 650;
+}
+
+.expl, .expl-b {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.expl-b {
+  letter-spacing: 2px;
+}
+
+.blue {
+  color: blue;
+}
+
+.time {
+  font-size: 80%;
+  display: block;
+  margin-bottom: 30px;
+}
