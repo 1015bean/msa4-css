@@ -1,0 +1,60 @@
+/* 위치 조정하기 쉽도록 초기 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  border: 2px solid #000;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+
+  position: relative;
+}
+
+.position {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.ab1 {
+  top: 50px;
+  left: 50px;
+}
+
+.ab2 {
+  top: 250px;
+  left: 50px;
+}
+
+.ab3 {
+  top: 100px;
+  left: 300px;
+}
+
+
+
+
+
+/* 다른 방법: 공통적으로 부여할 속성을 css로 class를 만들어 두고, 부여할 대상에 만들어 둔 class를 붙인다.  */
+/* .position-top-50 {
+  top: 50px;
+}
+
+.position-top-200 {
+  top: 200px;
+}
+
+.position-left-50 {
+  left: 50px;
+}
+
+.position-left-200 {
+  left: 200px;
+} */
