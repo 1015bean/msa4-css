@@ -1,0 +1,115 @@
+/* 
+  연결 선택자 
+  공백( ), 꺽세 괄호(>), 더하기(+), 물결(~) 등의 결합자를 이용해 특정 요소를 선택
+*/
+/* 후손 결합자: 공백을 이용하여 선택자를 조합, 부모요소 영역 하에 있는("자식요소와 손자요소 모두") 특정 선택자 모두에 스타일을 적용 */
+.container span {
+  color: blue;
+}
+/* 자식 결합자: 꺽세괄호를 이용하여 선택자를 조합, 부보요소 영역 직하에 있는 "자식요소들만" 스타일을 적용 */
+.container > span {
+  color: red;
+}
+
+/* 
+  인접 형제 결합자: +를 이용해서 선택자를 조합,
+                 첫번째 선택자 요소 "바로 뒤에 나오는" 형제 요소에 스타일을 적용 
+*/
+.bro + span {
+  color: purple;
+}
+.bro + div {
+  /* 인접 형제가 아니라서 적용 안 된다. */
+  color: aquamarine;
+}
+
+/* 
+  일반 형제 결합자: ~을 이용해서 선택자를 조합
+                 첫번째 요소 이후에 나오는 모든 형제요소에 스타일을 적용
+*/
+.bro ~ span {
+  color: yellowgreen;
+}
+
+/* 
+  속성 선택자
+    html 요소의 속성을 이용해서 특정 요소를 선택 
+*/
+/* 속성명으로 선택: `[속성명]`으로 선택 */
+[class] {
+  color: pink;
+}
+[href] {
+  color: aqua;
+}
+/* 속성명 + 속성값이 일치하는 요소 선택 */
+[target="_blank"] {
+  color: orange; 
+}
+/* 특정한 속성값이 포함되어있는 요소 선택 */
+[class~="att-class"] {
+  color: lightgoldenrodyellow;
+}
+/* 속성값과 완전 일치 //또는// '속성값'의 바로 뒤 글자가 '-'인 요소를 선택 */
+[class|="att"] {
+  color: violet;
+}
+/* 특정 속성값으로 시작하는 요소 선택 */
+[class^="att"] {
+  color: gold;
+}
+/* 특정 속성값으로 끝나는 요소 선택 */
+[class$="class"] {
+  color: hotpink;
+}
+/* 특정 속성값이 부분 일치하는 요소 선택 */
+[class*="class"] {
+  color: burlywood;
+}
+
+/* 
+  가상 선택자
+    HTMl 요소의 상태에 따라 선택해서 스타일을 지정하는 선택자
+    `선택자:가상클래스명`
+*/
+/* 한 번도 방문하지 않은 링크 요소 선택 */
+a:link {
+  color: orange;
+}
+/* 한 번이라도 방문한 링크요소 선택 */
+a:visited {
+  color: mediumseagreen;
+}
+/* 마우스커서가 올라가 있는 요소를 선택 */
+a:hover {
+  background-color: palevioletred;
+}
+/* 포커스가 적용되어 있는 요소를 선택 */
+a:focus {
+  outline: none;
+  border: 3px solid aqua;
+}
+
+input:checked + label{
+  background-color: violet;
+}
+/* 해당 선택자의 요소를 제외한 나머지 요소에 스타일 적용 */
+a:not([target]) {
+  font-style: italic; 
+}
+
+/* :nth-chid: 자식요소 선택에 사용하는 가상 선택자 */
+.container :nth-child(n + 2):nth-child(-n + 4) {
+  background-color: gray;
+}
+.container :nth-child(odd) {
+  background-color: lightgreen;
+}
+.container :nth-child(even) {
+  background-color: lightcoral;
+}
+
+/* nth-of-type(): 부모요소 내에서 특정 유형의 n번째 자식을 선택 */
+.container span:nth-of-type(2) {
+  color: red;
+}
