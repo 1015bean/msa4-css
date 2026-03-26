@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+
+  background-image: url(../imagegray1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+fieldset {
+  padding: 20px;
+
+  position: relative;
+}
+
+.i-want-you {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ffb0bd;
+}
+
+.input-focus {
+  /* input창 투명화 */
+  background-color: transparent;
+}
+
+.i-age {
+  width: 170px;
+}
+
+
+/* 가상 선택자, 가상 요소 */
+.name-age-sex::before {
+  content: "*";
+  color: red;
+}
+
+.input-focus:focus {
+  background-color: #ffb6c17e;
+}
+
+input[type="radio"]:checked + label {
+  color: #ffb6c1;
+  font-weight: bold;
+}
+
+.reqest {
+  width: 145px;
+  height: 100px;
+  /* 가로줄에서 콘텐츠의 세로 위치를 조정 */
+  vertical-align: top;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 0px 10px;
+
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+
+
+/* 팝업 띄우기 방법1: 가상 콘텐츠 만들기 */
+.btn:hover::after {
+  content: "한 번 더 확인하세요";
+
+  width: 150px;
+  background-color: #ffb6c17e;
+  color: #5c5c5c;
+  text-align: center;
+  border-radius: 3px;
+  padding: 1px;
+
+  position: absolute;
+  left: 80px;
+}
+
+
+/* 팝업 띄우기 방법2: visibility, opacity 태그 이용 */
+.popup1 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s; 
+  
+  font-size: 80%;
+  background-color: #ffb6c17e;
+  color: #5c5c5c;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px;
+
+  position: absolute;
+  top: 291px;
+}
+
+.btn:hover + span {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* 방법3: display: none; 이용 */
+.popup2 {
+  display: none;
+
+  font-size: 80%;
+  background-color: #ffb6c17e;
+  color: #5c5c5c;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.btn:hover + span {
+  display: inline-block;
+}
+
+
+
+.flowerpink > img {
+  width: 230px;
+  position: absolute;
+  top: 15px;
+  left: 290px;
+}

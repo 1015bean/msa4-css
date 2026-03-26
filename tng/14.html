@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="14.css">
+  <title>실습14 I want you!</title>
+</head>
+<body>
+  <form action="">
+    <div class="container">
+      <fieldset>
+        <legend class="i-want-you">I want YOU!</legend>
+        <div>
+          <label for="i-name" class="name-age-sex">이름</label>
+          <input type="text" id="i-name" name="i-name" class="input-focus" required>
+        </div>
+        <br>
+        <div>
+          <label for="i-age" class="name-age-sex">나이</label>
+          <input type="number" id="i-age" class="input-focus i-age" required min="20" max="120" maxlength="3">
+        </div>
+        <br>
+        <div>
+          <span class="name-age-sex">성별</span>
+          <input type="radio" id="male" name="sex">
+          <label for="male" >남성</label>
+          <input type="radio" id="female" name="sex">
+          <label for="female" >여성</label>
+          <input type="radio" id="etc" name="sex">
+          <label for="etc" >그 외</label>
+        </div>
+        <br>
+        <label for="reqest">요청사항</label>
+        <textarea name="reqest" id="reqest" class="input-focus reqest" placeholder="요청사항 입력"></textarea>
+        <br>
+        <button type="submit" class="btn">보내기</button>
+        <!-- <span class="popup1">내용을 다시 한 번 확인해주세요.</span> -->
+        <!-- <span class="popup2">한 번만 더 확인해봅시다.</span> -->
+        <div class="flowerpink">
+          <img src="../flowerpink.jpg" alt="_♥_">
+        </div>
+      </fieldset>
+    </div>
+  </form>
+</body>
+</html>
