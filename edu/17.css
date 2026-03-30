@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  /* width: 450px; */
+  height: 400px;
+  padding: 10px;
+  background-color: beige;
+
+  /* 부모 요소에 flex 지정 */
+  display: flex;
+
+
+
+
+
+  /* 
+    flex-direction: 주축 방향을 정하는 속성 (default: row"가로")
+    아이템을 정렬할 방향 설정: row & column
+  */
+  flex-direction: row;
+
+  /* gap: 아이템들 간의 간격을 조절하는 속성 */
+  gap: 20px;
+
+  /* flex-wrap: 줄 바꿈 여부를 지정(너비가 부족하면 다음 줄로 넘김) */
+  flex-wrap: wrap;
+
+  /* flex-flow: 'flex-direction'과 'flex-wrap'을 한 번에 지정 */
+  /* flex-flow: column nowrap; */
+
+
+
+
+
+  /* 
+  justify-content: 주축 기준으로 아이템들을 정렬하는 방법을 지정
+    * row의 경우 가로정렬 방법 & column의 경우 새로정렬 방법, 가로쓰기 & 세로쓰기와 비슷 * 
+  */
+  justify-content: center;
+
+  /* align-items: 교처축 기준 개별 라인을 정렬하는 방법을 지정 (default: stretch)
+  잘 사용 안 함
+ */
+  /* align-items: stretch; */
+
+  /* align-content: 교차축 기준 여러 라인을 뭉터기로 정렬하는 방법을 지정 */
+  align-content: space-evenly;
+}
+
+
+
+
+
+
+.item {
+  /* 
+    flex-basis: 아이템의 기본 크기를 설정
+    flex 이용하면 아이템 크기가 바뀌거나 오류가 남, 그걸 막기 위해 flex-basis 요소로  width를 지정
+    콘텐츠의 양 차이에 따른 오류를 막기 위해 보통 flex-basis: 0;으로 지정
+  */
+  /* flex-basis: 0; */
+
+  /* 
+  flex-grow: 빈공간이 생겼을 때 얼마나("비율") 더 커질지 결정하는 속성
+   !flex-basis으로 크기를 정해줘도, flex-grow를 설정해서 차지하는 비율이 달라지면, 아이템의 크기가 바뀜!
+  */
+  flex-grow: 1;
+
+  /* flex-shrink: 공간이 부족할 때 얼마나("비율") 더 줄어들지 결정하는 속성 */
+  flex-shrink: 1;
+
+  /* flex: flex-grow, flex-shrink, flex-basis를 한 번에 작성(실무 권장) */
+  flex: 1;  /* => flex: 1 1 0;과 같이 작동 */
+
+
+
+  width: 90px;
+  height: 50px;
+  background-color: lightblue;
+  border: 1px solid black
+}
+
+.item:nth-child(3) {
+  flex-grow: 3;
+}
