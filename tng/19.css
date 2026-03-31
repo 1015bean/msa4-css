@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+/* ---------------- */
+/* 사이드바 관련 */
+/* ---------------- */
+.side-bar{
+  background-color: #ff3b49;
+}
+
+.side-inner {
+  /* 
+    grid item인 side-bar에 position을 줘도 적용이 안 되므로
+    side-bar의 콘텐츠(자식요소)들을 한번 더 .side-inner로 랩핑 해줬다 
+  */
+  position: sticky;
+  top: 0;
+  color: #fff;
+}
+
+.tittle {
+  /* 
+    콘텐츠 중앙정렬: 
+    방법 2가지: 좌우에 패딩, 플랙스 센터 이용*/
+  padding: 50px 25px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.nav-box{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.nav-tittle {
+  background-color: #ff5662;
+  padding: 8px 15px;
+  font-weight: 900;
+}
+
+.nav-list {
+  list-style: none;
+
+  padding: 5px 0px;
+  /* flex 넣은 이유: 아이템들 간의 간격을 편하게 조절하기 위해 */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+a {
+  display: inline-block;
+  width: 100%;
+  padding: 3px 15px;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: #000;
+  transition: all 1.5s; 
+}
+
+
+/* ---------------- */
+/* 메인 관련 */
+/* ---------------- */
+.main {
+  height: 200vh; /* todo: 사이드바 완료하며 꼭 지워*/
+  background-color: #f5f5f5;
+}
