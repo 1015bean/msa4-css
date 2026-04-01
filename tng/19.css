@@ -4,10 +4,73 @@
   box-sizing: border-box;
 }
 
+
+
+/* ----------------------- */
+/* 공통 스타일 관련 */
+/* ----------------------- */
+
+a {
+  display: inline-block;
+  width: 100%;
+  padding: 3px 15px;
+
+  /* a태그의 기본 브라우저 양식 밤티하니까 제거 */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* button 태그의 공통으로 사용할 양식 지정 */
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #625af0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.btn-middle {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-large {
+  width: 60px;
+  height: 60px;
+}
+
+.btn-top {
+  /* top버튼 위치 고정 */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  padding: 0;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 검색바 인풋창 크기 */
+.input-w-80 {
+  width: 80%;
+}
+
+
+
+/* ----------------- */
+/* 지역 스타일 관련 */
+/* ----------------- */
 .container {
   display: grid;
   grid-template-columns: 200px 1fr;
 }
+
+
 
 /* ---------------- */
 /* 사이드바 관련 */
@@ -59,14 +122,6 @@
   gap: 5px;
 }
 
-a {
-  display: inline-block;
-  width: 100%;
-  padding: 3px 15px;
-
-  color: #fff;
-  text-decoration: none;
-}
 
 li:hover {
   background-color: #000;
@@ -78,6 +133,60 @@ li:hover {
 /* 메인 관련 */
 /* ---------------- */
 .main {
-  height: 200vh; /* todo: 사이드바 완료하며 꼭 지워*/
   background-color: #f5f5f5;
+  min-height: 100vh;
 }
+
+.main-search-box {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-banner {
+  background-image: url(../img/main_title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}    
+
+.sud-tittle {
+  color: #f5f5f5;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.main-contents-box {
+  padding: 10px;
+  /* 브라우저 크기 따라서 콘텐츠 정렬 바꾸기 */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  padding: 10px;
+  background-color: #fff;
+  /* 카드 안 요소 간의 간격 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-img {
+  /* 부모요소(카드 박스)의 비율에 맞춰서 적절한 크기로 바뀌게 하기 위해서 padding % 이용 */
+  padding-top: 150%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-tittle {
+  font-size: 20px;
+  font-weight: 900;
+} 
